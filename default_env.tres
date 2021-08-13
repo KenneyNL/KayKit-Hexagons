@@ -1,0 +1,16 @@
+[gd_resource type="Environment" load_steps=2 format=2]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[resource]
+background_mode = 2
+background_sky = SubResource( 1 )
+fog_enabled = true
+fog_depth_end = 60.0
+ssao_enabled = true
+ssao_radius = 0.4
+ssao_bias = 0.02
+ssao_quality = 2
+ssao_blur = 2
+dof_blur_far_enabled = true
+dof_blur_far_distance = 30.0

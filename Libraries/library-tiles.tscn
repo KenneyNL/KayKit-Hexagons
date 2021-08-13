@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Models/Items/mountain.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Items/house.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://Models/Items/detail_forestA.mesh" type="ArrayMesh" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="tileForestA" type="MeshInstance" parent="."]
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="tileMountain" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="tileHouse" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null

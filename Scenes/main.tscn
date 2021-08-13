@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Libraries/library-terrain.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://Scripts/terrain.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/rotate.gd" type="Script" id=3]
+[ext_resource path="res://Libraries/library-tiles.tres" type="MeshLibrary" id=4]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="TerrainMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 1, 0.2, 0.866 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray(  )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="TileMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 4 )
+cell_size = Vector3( 1, 0.2, 0.866 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray(  )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 0.819152, -0.286788, 0.496732, 0, 0.866025, 0.5, -0.573577, -0.409576, 0.709406, 0, 0, 0 )
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24 )
+fov = 30.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
+shadow_enabled = true

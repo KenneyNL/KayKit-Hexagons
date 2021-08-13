@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Models/Terrain/hex_forest.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Terrain/hex_sand.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://Models/Terrain/hex_rock.mesh" type="ArrayMesh" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="tileGrass" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="tileSand" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="tileRock" type="MeshInstance" parent="."]
+mesh = ExtResource( 3 )
+material/0 = null
