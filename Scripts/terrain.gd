@@ -58,13 +58,15 @@ func generate():
 				var _quaternion = Quat(Vector3(0, 1, 0), deg2rad(rand_range(0, 180)))
 				var _randomRotation = Basis(_quaternion).get_orthogonal_index()
 				
-				if _tile == 0 and _random < 2:
-					set_tile(Vector3(x + offset, _noise, y), 0, _randomRotation)
+				if _tile == 0:
+					if  _random < 1:
+						set_tile(Vector3(x + offset, _noise, y), 2, _randomRotation)
 
-				if _tile == 0 and _random < 1:
-					set_tile(Vector3(x + offset, _noise, y), 2, _randomRotation)
+					elif  _random < 2:
+						set_tile(Vector3(x + offset, _noise, y), 0, _randomRotation)					
 
-				if _tile > 1 and _random < 1:
+
+				elif _tile > 1 and _random < 1:
 					set_tile(Vector3(x + offset, _noise, y), 1, _randomRotation)
 
 # Set terrain tile
